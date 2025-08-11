@@ -496,4 +496,68 @@ document.getElementById("searchInput").addEventListener("keyup", function () {
         row.style.display = text.includes(filter) ? "" : "none";
     });
 });
+<div class="pagination">
+    <button id="prevPage">Previous</button>
+    <span id="pageInfo"></span>
+    <button id="nextPage">Next</button>
+</div>
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+    gap: 10px;
+}
+
+.pagination button {
+    padding: 8px 15px;
+    border: none;
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 0.9em;
+}
+
+.pagination button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.pagination span {
+    font-size: 1em;
+}
+let currentPage = 1;
+let rowsPerPage = 5;
+let tableRows = document.querySelectorAll("#leaveTable tbody tr");
+
+function displayTablePage(page) {
+    let start = (page - 1) * rowsPerPage;
+    let end = start + rowsPerPage;
+
+    tableRows.forEach((row, index) => {
+        row.style.display = (index >= start && index < end) ? "" : "none";
+    });
+
+    document.getElementById("pageInfo").textContent = `Page ${page} of ${Math.ceil(tableRows.length / rowsPerPage)}`;
+    document.getElementById("prevPage").disabled = page === 1;
+    document.getElementById("nextPage").disabled = page === Math.ceil(tableRows.length / rowsPerPage);
+}
+
+document.getElementById("prevPage").addEventListener("click", () => {
+    if (currentPage > 1) {
+        currentPage--;
+        displayTablePage(currentPage);
+    }
+});
+
+document.getElementById("nextPage").addEventListener("click", () => {
+    if (currentPage < Math.ceil(tableRows.length / rowsPerPage)) {
+        currentPage++;
+        displayTablePage(currentPage);
+    }
+});
+
+// Initial load
+displayTablePage(currentPage);
 

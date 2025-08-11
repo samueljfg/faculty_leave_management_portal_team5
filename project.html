@@ -687,4 +687,50 @@ displayTablePage(currentPage);
     background: #f8d7da;
     color: #721c24;
 }
+@media screen and (max-width: 768px) {
+    .recent-activity table,
+    .recent-activity thead,
+    .recent-activity tbody,
+    .recent-activity th,
+    .recent-activity td,
+    .recent-activity tr {
+        display: block;
+        width: 100%;
+    }
+
+    .recent-activity thead tr {
+        display: none;
+    }
+
+    .recent-activity tr {
+        margin-bottom: 15px;
+        background: #fff;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 10px;
+    }
+
+    .recent-activity td {
+        text-align: right;
+        padding: 10px;
+        position: relative;
+        border: none;
+        border-bottom: 1px solid #f0f0f0;
+    }
+
+    .recent-activity td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 10px;
+        width: 50%;
+        padding-right: 10px;
+        font-weight: bold;
+        text-align: left;
+        color: #555;
+    }
+
+    .recent-activity td:last-child {
+        border-bottom: none;
+    }
+}
 

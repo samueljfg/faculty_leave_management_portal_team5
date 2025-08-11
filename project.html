@@ -209,4 +209,83 @@ Add dashboard header section with title
 .stat-card p {
     color: #666;
 }
+<!-- Leave Requests Table -->
+<section class="leave-requests">
+    <h2>Recent Leave Requests</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Teacher Name</th>
+                <th>Leave Type</th>
+                <th>Start Date</th>
+                <th>End Date</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>John Smith</td>
+                <td>Sick Leave</td>
+                <td>2025-08-01</td>
+                <td>2025-08-03</td>
+                <td>Approved</td>
+            </tr>
+            <tr>
+                <td>Mary Johnson</td>
+                <td>Casual Leave</td>
+                <td>2025-08-05</td>
+                <td>2025-08-06</td>
+                <td>Pending</td>
+            </tr>
+            <tr>
+                <td>David Lee</td>
+                <td>Annual Leave</td>
+                <td>2025-08-10</td>
+                <td>2025-08-15</td>
+                <td>Rejected</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+/* Leave Requests Table Styles */
+.leave-requests {
+    margin-top: 30px;
+}
+
+.leave-requests h2 {
+    margin-bottom: 15px;
+    color: #333;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+thead {
+    background-color: #007bff;
+    color: white;
+}
+
+thead th {
+    padding: 12px;
+    text-align: left;
+}
+
+tbody td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+}
+
+tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
 

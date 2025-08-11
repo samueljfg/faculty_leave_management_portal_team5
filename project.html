@@ -427,4 +427,50 @@ tbody tr:last-child td {
 .status-rejected {
     color: red;
 }
+<section class="leave-summary">
+    <div class="card approved">
+        <h3>Approved</h3>
+        <p>15</p>
+    </div>
+    <div class="card pending">
+        <h3>Pending</h3>
+        <p>4</p>
+    </div>
+    <div class="card rejected">
+        <h3>Rejected</h3>
+        <p>2</p>
+    </div>
+</section>
+.leave-summary {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.leave-summary .card {
+    flex: 1;
+    padding: 15px;
+    border-radius: 10px;
+    color: #fff;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.leave-summary .approved {
+    background-color: #4CAF50;
+}
+
+.leave-summary .pending {
+    background-color: #FF9800;
+}
+
+.leave-summary .rejected {
+    background-color: #F44336;
+}
+
+.leave-summary .card p {
+    font-size: 2em;
+    font-weight: bold;
+    margin-top: 10px;
+}
 

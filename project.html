@@ -379,4 +379,52 @@ tbody tr:last-child td {
 .leave-table td:nth-child(5):contains("Rejected") {
     color: red;
 }
+<section class="recent-leave">
+    <h2>Recent Leave Requests</h2>
+    <table class="leave-table">
+        <thead>
+            <tr>
+                <th>Employee</th>
+                <th>Type</th>
+                <th>From</th>
+                <th>To</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>John Doe</td>
+                <td>Casual Leave</td>
+                <td>2025-08-10</td>
+                <td>2025-08-12</td>
+                <td class="status-approved">Approved</td>
+            </tr>
+            <tr>
+                <td>Jane Smith</td>
+                <td>Sick Leave</td>
+                <td>2025-08-14</td>
+                <td>2025-08-15</td>
+                <td class="status-pending">Pending</td>
+            </tr>
+            <tr>
+                <td>Michael Lee</td>
+                <td>Annual Leave</td>
+                <td>2025-09-01</td>
+                <td>2025-09-05</td>
+                <td class="status-rejected">Rejected</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+.status-approved {
+    color: green;
+}
+
+.status-pending {
+    color: orange;
+}
+
+.status-rejected {
+    color: red;
+}
 

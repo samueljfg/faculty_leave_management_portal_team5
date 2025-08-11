@@ -411,6 +411,9 @@ tbody tr:last-child td {
     color: red;
 }
 
+<footer class="main-footer">
+    <p>&copy; 2025 EduLeave Pro | All Rights Reserved</p>
+</footer>
 
 <section class="recent-leave">
     <h2>Recent Leave Requests</h2>
@@ -529,7 +532,7 @@ document.getElementById("searchInput").addEventListener("keyup", function () {
     let filter = this.value.toLowerCase();
     let rows = document.querySelectorAll("#leaveTable tbody tr");
     
-    rows.forEach(row => {
+    rows.forEach(row = {
         let text = row.textContent.toLowerCase();
         row.style.display = text.includes(filter) ? "" : "none";
     });
@@ -573,8 +576,8 @@ function displayTablePage(page) {
     let start = (page - 1) * rowsPerPage;
     let end = start + rowsPerPage;
 
-    tableRows.forEach((row, index) => {
-        row.style.display = (index >= start && index < end) ? "" : "none";
+    tableRows.forEach((row, index) = {
+        row.style.display = (index = start  index < end) ? "" : "none";
     });
 
     document.getElementById("pageInfo").textContent = `Page ${page} of ${Math.ceil(tableRows.length / rowsPerPage)}`;
@@ -583,13 +586,13 @@ function displayTablePage(page) {
 }
 
 document.getElementById("prevPage").addEventListener("click", () => {
-    if (currentPage > 1) {
+    if (currentPage  1) {
         currentPage--;
         displayTablePage(currentPage);
     }
 });
 
-document.getElementById("nextPage").addEventListener("click", () => {
+document.getElementById("nextPage").addEventListener("click", () = {
     if (currentPage < Math.ceil(tableRows.length / rowsPerPage)) {
         currentPage++;
         displayTablePage(currentPage);

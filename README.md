@@ -1,4 +1,4 @@
-# Teacher Leave Management - Homepage
+# faculty Leave Management - Homepage
 
 ## 📌 Project Overview
 The **Teacher Leave Management System** is a web-based platform designed to help educational institutions manage teacher leave requests efficiently.  

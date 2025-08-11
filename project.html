@@ -473,4 +473,27 @@ tbody tr:last-child td {
     font-weight: bold;
     margin-top: 10px;
 }
+<section class="search-bar">
+    <input type="text" id="searchInput" placeholder="Search leave requests...">
+</section>
+.search-bar {
+    margin-bottom: 15px;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+document.getElementById("searchInput").addEventListener("keyup", function () {
+    let filter = this.value.toLowerCase();
+    let rows = document.querySelectorAll("#leaveTable tbody tr");
+    
+    rows.forEach(row => {
+        let text = row.textContent.toLowerCase();
+        row.style.display = text.includes(filter) ? "" : "none";
+    });
+});
 

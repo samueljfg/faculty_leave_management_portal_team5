@@ -326,4 +326,57 @@ tbody tr:last-child td {
         </tbody>
     </table>
 </section>
+/* Recent Leave Requests Table Styling */
+.recent-leave {
+    margin: 20px;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.recent-leave h2 {
+    font-size: 1.4em;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.leave-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.leave-table th, 
+.leave-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.leave-table th {
+    background-color: #4CAF50;
+    color: white;
+    font-weight: bold;
+}
+
+.leave-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.leave-table td:nth-child(5) {
+    font-weight: bold;
+}
+
+/* Status Colors */
+.leave-table td:nth-child(5):contains("Approved") {
+    color: green;
+}
+
+.leave-table td:nth-child(5):contains("Pending") {
+    color: orange;
+}
+
+.leave-table td:nth-child(5):contains("Rejected") {
+    color: red;
+}
 

@@ -161,4 +161,52 @@ Add dashboard header section with title
         </div>
     </div>
 </div>
+/* Main Content Styles */
+.main-content {
+    margin-left: 250px; /* space for sidebar */
+    padding: 20px;
+    background-color: #f4f6f8;
+    min-height: 100vh;
+}
+
+.main-content h2 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.main-content p {
+    margin-bottom: 20px;
+    color: #555;
+}
+
+/* Dashboard Stats Layout */
+.stats {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.stat-card {
+    background-color: white;
+    padding: 20px;
+    flex: 1 1 200px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.2s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+}
+
+.stat-card h3 {
+    font-size: 2rem;
+    margin-bottom: 5px;
+    color: #007bff;
+}
+
+.stat-card p {
+    color: #666;
+}
 

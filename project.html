@@ -120,6 +120,15 @@ Add dashboard header section with title
         <li><a href="#">Settings</a></li>
     </ul>
 </aside>
+<aside class="sidebar">
+    <h3>Quick Access</h3>
+    <ul>
+        <li><a href="#">Pending Requests</a></li>
+        <li><a href="#">Approved Leaves</a></li>
+        <li><a href="#">Calendar</a></li>
+    </ul>
+</aside>
+
 /* Sidebar Styles */
 .sidebar {
     width: 220px;
@@ -401,6 +410,11 @@ tbody tr:last-child td {
 .leave-table td:nth-child(5):contains("Rejected") {
     color: red;
 }
+
+<footer class="main-footer">
+    <p>&copy; 2025 EduLeave Pro | All Rights Reserved</p>
+</footer>
+
 <section class="recent-leave">
     <h2>Recent Leave Requests</h2>
     <table class="leave-table">
@@ -419,11 +433,13 @@ tbody tr:last-child td {
                 <td>Casual Leave</td>
                 <td>2025-08-10</td>
                 <td>2025-08-12</td>
+		<td>2 days</td>
                 <td class="status-approved">Approved</td>
             </tr>
             <tr>
                 <td>Jane Smith</td>
                 <td>Sick Leave</td>
+		<td>1 day</td>
                 <td>2025-08-14</td>
                 <td>2025-08-15</td>
                 <td class="status-pending">Pending</td>
@@ -433,11 +449,14 @@ tbody tr:last-child td {
                 <td>Annual Leave</td>
                 <td>2025-09-01</td>
                 <td>2025-09-05</td>
+		<td>4 days</td>
                 <td class="status-rejected">Rejected</td>
             </tr>
         </tbody>
     </table>
 </section>
+
+
 .status-approved {
     color: green;
 }
@@ -513,7 +532,7 @@ document.getElementById("searchInput").addEventListener("keyup", function () {
     let filter = this.value.toLowerCase();
     let rows = document.querySelectorAll("#leaveTable tbody tr");
     
-    rows.forEach(row => {
+    rows.forEach(row = {
         let text = row.textContent.toLowerCase();
         row.style.display = text.includes(filter) ? "" : "none";
     });
@@ -557,8 +576,8 @@ function displayTablePage(page) {
     let start = (page - 1) * rowsPerPage;
     let end = start + rowsPerPage;
 
-    tableRows.forEach((row, index) => {
-        row.style.display = (index >= start && index < end) ? "" : "none";
+    tableRows.forEach((row, index) = {
+        row.style.display = (index = start  index < end) ? "" : "none";
     });
 
     document.getElementById("pageInfo").textContent = `Page ${page} of ${Math.ceil(tableRows.length / rowsPerPage)}`;
@@ -567,13 +586,13 @@ function displayTablePage(page) {
 }
 
 document.getElementById("prevPage").addEventListener("click", () => {
-    if (currentPage > 1) {
+    if (currentPage  1) {
         currentPage--;
         displayTablePage(currentPage);
     }
 });
 
-document.getElementById("nextPage").addEventListener("click", () => {
+document.getElementById("nextPage").addEventListener("click", () = {
     if (currentPage < Math.ceil(tableRows.length / rowsPerPage)) {
         currentPage++;
         displayTablePage(currentPage);
